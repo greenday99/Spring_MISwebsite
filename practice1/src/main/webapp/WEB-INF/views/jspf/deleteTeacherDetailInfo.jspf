@@ -1,0 +1,619 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!-- 刪除教師學歷信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaEdu"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除學歷信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條學歷信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaEduForm" action="deleteTeaEdu" method="post">
+					<input type="hidden" name="teaCode" id="deleteEduTeaCode">
+					<input type="hidden" name="teaEduCode" id="deleteEduCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師經歷信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaExp"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除經歷信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條經歷信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaExpForm" action="deleteTeaExp" method="post">
+					<input type="hidden" name="teaCode" id="deleteExpTeaCode">
+					<input type="hidden" name="teaExpCode" id="deleteTeaExpCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師專長信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaSpe"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除專長信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條專長信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaSpeForm" action="deleteTeaSpe" method="post">
+					<input type="hidden" name="teaCode" id="deleteSpeTeaCode">
+					<input type="hidden" name="teaSpeCode" id="deleteTeaSpeCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師期刊論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteIssuePaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除期刊論文信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條期刊論文信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteIssuePaperForm" action="deleteIssuePaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteIssuePaperTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteIssuePaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師研討會論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteMeetingPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除研討會論文信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條研討會論文信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteMeetingPaperForm" action="deleteMeetingPaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteMeetingPaperTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteMeetingPaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師書籍信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteBooks"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除書籍信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條書籍信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteBooksForm" action="deleteBooks" method="post">
+					<input type="hidden" name="teaCode" id="deleteBooksTeaCode">
+					<input type="hidden" name="teaDataContCode" id="deleteBooksCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師技術報告信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTechReport"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除技術報告信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條技術報告信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTechReportForm" action="deleteTechReport"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteTechReportTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteTechReportCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師畢業論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeacherPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除畢業論文信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條畢業論文信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeacherPaperForm" action="deleteTeacherPaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteTeacherPaperTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteTeacherPaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師在資訊相關雜誌上近幾年發表之文章信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteMagazinePaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除在資訊相關雜誌上近幾年發表之文章信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條在資訊相關雜誌上近幾年發表之文章信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteMagazinePaperForm" action="deleteMagazinePaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteMagazinePaperTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteMagazinePaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師期刊審查中論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteWaitingPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除期刊審查中論文信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條期刊審查中論文信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteWaitingPaperForm" action="deleteWaitingPaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteWaitingPaperTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteWaitingPaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師學術著作信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteScholarPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除學術著作信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條學術著作信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteScholarPaperForm" action="deleteScholarPaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteScholarPaperTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteScholarPaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師研究獎勵信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaAwa"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除研究獎勵信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條研究獎勵信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaAwaForm" action="deleteTeaAwa" method="post">
+					<input type="hidden" name="teaCode" id="deleteTeaAwaTeaCode">
+					<input type="hidden" name="teaAwaCode" id="deleteTeaAwaCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師研究獎勵信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaPlan"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除研究計劃信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條研究計劃信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaPlanForm" action="deleteTeaPlan" method="post">
+					<input type="hidden" name="teaCode" id="deleteTeaPlanTeaCode">
+					<input type="hidden" name="teaPlanCode" id="deleteTeaPlanCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師實務研究信息 -->
+<div class="modal fade bs-example-modal-sm" id="deletePractical"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除實務研究信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條實務研究信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deletePracticalForm" action="deletePractical"
+					method="post">
+					<input type="hidden" name="teaCode" id="deletePracticalTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deletePracticalCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師指導學生專題信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaStuTopic"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除指導學生專題信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條學生專題信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaStuTopicForm" action="deleteTeaStuTopic"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteTeaStuTopicTeaCode">
+					<input type="hidden" name="topicID" id="deleteTeaStuTopicCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師指導研究生論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteTeaStuPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除指導研究生論文信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條研究生論文信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteTeaStuPaperForm" action="deleteTeaStuPaper"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteTeaStuPaperTeaCode">
+					<input type="hidden" name="paperID" id="deleteTeaStuPaperCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 刪除教師其他教學經驗信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteOtherTeaExp"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除其他教學經驗信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條其他教學經驗刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteOtherTeaExpForm" action="deleteOtherTeaExp"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteOtherTeaExpTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteOtherTeaExpCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師校內服務信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteInSchService"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除校內服務信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條校內服務信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteInSchServiceForm" action="deleteInSchService"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteInSchServiceTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteInSchServiceCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師校外服務信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteOutSchService"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除校外服務信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條校外服務信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteOutSchServiceForm" action="deleteOutSchService"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteOutSchServiceTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteOutSchServiceCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師擔任委員信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteAsCommitMem"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除擔任委員信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條擔任委員信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteAsCommitMemForm" action="deleteAsCommitMem"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteAsCommitMemTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteAsCommitMemCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 刪除教師學術經驗信息 -->
+<div class="modal fade bs-example-modal-sm" id="deleteScholarExp"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">刪除學術經驗信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>該條學術經驗信息刪除後，將不可恢復</p>
+			</div>
+			<div class="modal-footer">
+				<form id="deleteScholarExpForm" action="deleteScholarExp"
+					method="post">
+					<input type="hidden" name="teaCode" id="deleteScholarExpTeaCode">
+					<input type="hidden" name="teaDataContCode"
+						id="deleteScholarExpCode">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-danger">確認</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

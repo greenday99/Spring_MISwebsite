@@ -1,0 +1,26 @@
+package com.pratice.webapp.model;
+
+public class ArticleCategory {
+	private int articleCategoryID;
+	private String articleCategoryName;
+	private String selected;
+	public int getArticleCategoryID() {
+		return articleCategoryID;
+	}
+	public void setArticleCategoryID(int articleCategoryID) {
+		this.articleCategoryID = articleCategoryID;
+	}
+	public String getArticleCategoryName() {
+		return articleCategoryName;
+	}
+	public void setArticleCategoryName(String articleCategoryName) {
+		this.articleCategoryName = articleCategoryName;
+	}
+	public String getSelected() {
+		return selected;
+	}
+	public void setSelected(String selected) {
+		this.selected = selected;
+	}
+	
+}

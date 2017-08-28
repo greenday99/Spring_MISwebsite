@@ -1,0 +1,103 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<div id="pre_header" class="visible-lg">
+	<div class="container">
+		<div class="row">
+			<div id="footermenu" class="col-md-8">
+				<ul class="list-unstyled list-inline pull-right">
+					<li><a href="MISwebsiteIndex">回首頁</a></li>
+					<li><a href="http://www.fju.edu.tw/#&panel1-1" target="_blank">輔仁大學</a></li>
+					<li><a href="#">網站地圖</a></li>
+					<li><a href="http://english.im.fju.edu.tw/" target="_blank">English</a></li>
+					<li><a href="login" target="_blank">登入</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="header" class="container">
+	<div class="row">
+		<!-- Logo -->
+		<div class="logo">
+			<a href="MISwebsiteIndex" title="資管首頁"> <img src="img/logo.png"
+				alt="Logo" />
+			</a>
+		</div>
+		<!-- End Logo -->
+		<!-- Top Menu -->
+		<div class="col-md-12 margin-top-30">
+			<div id="hornav" class="pull-right visible-lg">
+				<ul class="nav navbar-nav">
+
+					<li><span>系所介紹</span>
+						<ul>
+							<li><a href="Imintro2?di_code=1">系所沿革</a></li>
+							<li><a href="assitant">行政同仁</a></li>
+							<li><a href="Imintro2?di_code=7">系歌</a></li>
+							<li><a href="Imintro2?di_code=3">教學目標</a></li>
+							<li><a href="Imintro2?di_code=6">圖書空間與實驗室</a></li>
+							<li><a href="Imintro2?di_code=2">系大事紀</a></li>
+							<li><a href="Imintro2?di_code=5">系所法規</a></li>
+							<li><a href="award">得獎記錄</a></li>
+							<li><a href="Imintro2?di_code=4">職涯CVHS暨畢業生未來發展</a></li>
+						</ul></li>
+
+					<li><span>師資陣容</span>
+						<ul>
+							<li><a href="teacherInfo">現任教師</a></li>
+							<li><a href="Sym">教學成果</a></li>
+						</ul></li>
+
+					<li><span>課程特色</span>
+						<ul>
+							<li><a
+								href="http://www.cvhs.fju.edu.tw/cvhs2014/system/aboutUs">學習目標職涯CVHS季畢業生未來發展</a></li>
+							<li><a href="courserule">修業規則</a></li>
+							<li class="parent"><span>大學部</span>
+								<ul>
+									<li><a href="course">課程時間表</a></li>
+									<li><a href="scheduleplan">課程規劃</a></li>
+								</ul></li>
+							<li class="parent"><span>碩士班</span>
+								<ul>
+									<li><a href="course">課程時間表</a></li>
+									<li><a href="scheduleplan">課程規劃</a></li>
+								</ul></li>
+							<li class="parent"><span>碩士在職專班</span>
+								<ul>
+									<li><a href="course">課程時間表</a></li>
+									<li><a href="scheduleplan">課程規劃</a></li>
+								</ul></li>
+							<li><a
+								href="http://www.management.fju.edu.tw/subweb/internship/00_infomation.php">產業實習</a></li>
+							<li><a href="http://www.course.fju.edu.tw/student/Main.htm">選課資訊網</a></li>
+							<li><a href="http://140.136.251.64/Outlines/student/">課程大綱查詢系統</a></li>
+							<li><a
+								href="http://www.management.fju.edu.tw/subweb/studyabroad/">管理學院境外學習</a></li>
+						</ul></li>
+					<li><span>消息公告</span>
+						<ul>
+							<li><a href="news">所有公告</a></li>
+							<li><a href="newsBranch?sCode=DK">行政相關</a></li>
+							<li><a href="newsBranch?sCode=DJ">企業徵才</a></li>
+							<li><a href="newsBranch?sCode=DH">獎助學金</a></li>
+							<li><a href="newsBranch?sCode=DF">學術活動與專題演講</a></li>
+							<li><a href="newsBranch?sCode=DI">榮譽榜</a></li>
+						</ul></li>
+
+					<li><span>未來學生</a></span>
+						<ul>
+							<li><a href="http://localhost:3000/web/newstudent">高中生專區</a></li>
+						</ul>
+					</li>				
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- End Top Menu -->
+	</div>
+</div>
+<!-- === END HEADER === -->
+
+

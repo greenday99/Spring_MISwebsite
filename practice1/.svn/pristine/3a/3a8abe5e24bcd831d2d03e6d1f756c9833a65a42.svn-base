@@ -1,0 +1,57 @@
+package com.pratice.webapp.model;
+
+import java.util.Date;
+
+public class Article {
+	private int articleID;
+	private int articleCategoryID;
+	private String articleTitle;
+	private String articleContent;
+	private int isShow;
+	private Date createDate;
+	private String articleCategoryName;
+	public int getArticleID() {
+		return articleID;
+	}
+	public void setArticleID(int articleID) {
+		this.articleID = articleID;
+	}
+	public int getArticleCategoryID() {
+		return articleCategoryID;
+	}
+	public void setArticleCategoryID(int articleCategoryID) {
+		this.articleCategoryID = articleCategoryID;
+	}
+	public String getArticleTitle() {
+		return articleTitle;
+	}
+	public void setArticleTitle(String articleTitle) {
+		this.articleTitle = articleTitle;
+	}
+	public String getArticleContent() {
+		return articleContent;
+	}
+	public void setArticleContent(String articleContent) {
+		this.articleContent = articleContent;
+	}
+	public int getIsShow() {
+		return isShow;
+	}
+	public void setIsShow(int isShow) {
+		this.isShow = isShow;
+	}
+	public Date getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+	public String getArticleCategoryName() {
+		return articleCategoryName;
+	}
+	public void setArticleCategoryName(String articleCategoryName) {
+		this.articleCategoryName = articleCategoryName;
+	}
+	
+	
+}

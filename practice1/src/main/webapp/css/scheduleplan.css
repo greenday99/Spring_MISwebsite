@@ -1,0 +1,221 @@
+.sceduleplan table { 
+	font-family: sans-serif;
+    width: 70%; 
+    border-collapse: collapse; 
+    margin:20px auto;
+    line-height: 28px;
+    }
+    
+input {
+	
+    text-align: center;
+    border-radius: 4px;
+}
+}
+
+/* Zebra striping */
+--.sceduleplan_ tr:nth-of-type(odd) { 
+  --  background: #eee; 
+    --}
+
+.sceduleplan th { 
+    background: #4F4E53; 
+    color: white; 
+    text-align: center; 
+    }
+
+.sceduleplan td, th { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+    font-size: 14px;
+    }
+    
+tr.scheduleplan_1 {
+	background: #eee;
+}
+    
+tr.scheduleplan_3 {
+	background: #eee;
+}
+    
+tr.scheduleplan_5 {
+	background: #eee;
+}
+
+tr.scheduleplan_7 {
+	background: #eee;
+}
+
+tr.scheduleplan_9 {
+	background: #eee;
+}
+
+tr .scheduleplan_0 {
+	background:white; 
+}
+
+tr .scheduleplan_2{
+	background:white; 
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .sceduleplan table { 
+        width: 100%; 
+    }
+
+    /* Force table to not be like tables anymore */
+    .sceduleplan table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .sceduleplan thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .sceduleplan tr { border: 1px solid #ccc; }
+    
+    .sceduleplan td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+
+    .sceduleplan td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+
+        color: #000;
+        font-weight: bold;
+    }
+
+}
+
+
+.sceduleplan_manage table { 
+	font-family: sans-serif;
+    width: auto; 
+    border-collapse: collapse; 
+    margin:20px auto;
+    line-height: 28px;
+    }
+
+/* Zebra striping */
+--.sceduleplan_manage_ tr:nth-of-type(odd) { 
+  --  background: #eee; 
+    --}
+
+.sceduleplan_manage th { 
+    background: #4F4E53; 
+    color: white; 
+    text-align: center; 
+    }
+
+.sceduleplan_manage td, th { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+    font-size: 14px;
+    }
+    
+tr.scheduleplan_1 {
+	background: #eee;
+}
+    
+tr.scheduleplan_3 {
+	background: #eee;
+}
+    
+tr.scheduleplan_5 {
+	background: #eee;
+}
+
+tr.scheduleplan_7 {
+	background: #eee;
+}
+
+tr.scheduleplan_9 {
+	background: #eee;
+}
+
+tr .scheduleplan_0 {
+	background:white; 
+}
+
+tr .scheduleplan_2{
+	background:white; 
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .sceduleplan_manage table { 
+        width: 100%; 
+    }
+
+    /* Force table to not be like tables anymore */
+    .sceduleplan_manage table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .sceduleplan_manage thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .sceduleplan_manage tr { border: 1px solid #ccc; }
+    
+    .sceduleplan_manage td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+
+    .sceduleplan_manage td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+
+        color: #000;
+        font-weight: bold;
+    }
+
+}

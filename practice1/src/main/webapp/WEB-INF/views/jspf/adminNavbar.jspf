@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+	<div class="row">
+		<!-- Logo -->
+		<div class="logo">
+			<a href="adminIndex" title="返回后台首页"> <img src="img/logo.png"
+				alt="Logo" />
+			</a>
+		</div>
+		<!-- End Logo -->
+		<!-- Top Menu -->
+		<div class="col-md-12 margin-top-30">
+			<div id="hornav" class="pull-right visible-lg">
+				<ul class="nav navbar-nav">
+
+					<li><span>系所介紹</span>
+						<ul>
+							<li><a href="back_imintro">系所沿革</a></li>
+							<li><a href="back_updateass">行政同仁</a></li>
+							<li><a href="back_imintro">系歌</a></li>
+							<li><a href="back_imintro">教學目標</a></li>
+							<li><a href="back_imintro">圖書空間與實驗室</a></li>
+							<li><a href="back_imintro">系大事紀</a></li>
+							<li><a href="back_imintro">系所法規</a></li>
+							<li><a href="back_award">得獎記錄</a></li>
+							<li><a href="back_imintro">職涯CVHS暨畢業生未來發展</a></li>
+						</ul></li>
+
+					<li><span>師資陣容</span>
+						<ul>
+							<li><a href="teacherManage">教師管理</a></li>
+							<li><a href="SymAdmin">教學成果管理</a></li>
+						</ul></li>
+
+					<li><span>課程特色</span>
+						<ul>
+							<li><a href="course_manage">課程時間表管理</a></li>
+							<li><a href="scheduleplan_manage">課程規劃管理</a></li>
+						</ul></li>
+
+					<li><span>消息公告</span>
+						<ul>
+							<li><a href="newsAdmin">所有公告</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- End Top Menu -->
+	</div>
+</div>
+<!-- === END HEADER === -->

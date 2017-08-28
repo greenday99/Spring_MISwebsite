@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="LoginDAO" class="com.practice.webapp.dao.impl.LoginDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="account" class="com.practice.webapp.entity.login.Account"
+		scope="session">
+		<aop:scoped-proxy />
+	</bean>
+
+	<bean id="imintroDAO" class="com.practice.webapp.dao.impl.ImintroDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="newsDAO" class="com.practice.webapp.dao.impl.NewsDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="teacherInfoDAO" class="com.practice.webapp.dao.impl.TeacherInfoDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="teacherInfoAdminDAO" class="com.practice.webapp.dao.impl.TeacherInfoAdminDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="TeachResultDAO" class="com.practice.webapp.dao.impl.TeachResultDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="courseDAO" class="com.practice.webapp.dao.impl.CourseDAOImpl">
+		<property name="dataSource" ref="dataSource" /> <!-- 用資料庫撈回來的資料 -->
+	</bean>
+
+	<bean id="courseruleDAO" class="com.practice.webapp.dao.impl.CourseruleDAOImpl">
+		<property name="dataSource" ref="dataSource" /> <!-- 用資料庫撈回來的資料 -->
+	</bean>
+
+	<bean id="scheduleplanDAO" class="com.practice.webapp.dao.impl.SchedulePlanDAOImpl">
+		<property name="dataSource" ref="dataSource" /> <!-- 用資料庫撈回來的資料 -->
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+		<property name="scopes">
+			<map>
+				<entry key="session">
+					<bean class="org.springframework.web.context.request.SessionScope" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- 上傳文件 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8" />
+		<!-- 最大内存大小 -->
+		<property name="maxInMemorySize" value="10240" />
+		<!-- 最大文件大小，-1为不限制大小 -->
+		<property name="maxUploadSize" value="-1" />
+	</bean>
+</beans>

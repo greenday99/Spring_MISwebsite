@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<div id="base">
+	<div class="container padding-vert-30">
+		<div class="row">
+			<!-- googleMap -->
+			<div class="col-md-6 margin-bottom-20">
+				<h3 class="margin-bottom-10">
+					<a href="http://www.fju.edu.tw/aboutFju.jsp?labelID=7">校園鳥瞰圖</a>
+				</h3>
+				<div class="thumbs-gallery">
+
+					<iframe width="470" height="200" frameborder="0" scrolling="no"
+						marginheight="0" marginwidth="0"
+						src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=zh-TW&amp;geocode=&amp;q=輔仁大學&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=46.677964,107.138672&amp;ie=UTF8&amp;hq=輔仁大學&amp;t=m&amp;ll=25.036227,121.432142&amp;spn=0.003888,0.010085&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- End GoogleMap -->
+
+			<!-- ContactInfo -->
+			<div class="col-md-6 margin-bottom-20">
+				<h3 class="margin-bottom-10">
+					<a href="#">輔仁大學資訊管理學系</a>
+				</h3>
+				<ul class="menu">
+					<li><a class="fa-home" href="#">新北市新莊區242中正路510號 利瑪竇大樓
+							LM306</a></li>
+					<li><a class="fa-phone" href="#">碩士班祕書室 TEL:(02)29052940
+							FAX:(02)29052182</a></li>
+					<li><a class="fa-phone" href="#">大學部祕書室 TEL:(02)29052666
+							FAX:(02)29052182</a></li>
+					<li><a class="fa-comment-o" href="contact.html">歡迎給予我們建議 →</a>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+
+			</div>
+			<!-- End ContactInfo -->
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- Footer Menu -->
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div id="copyright" class="col-md-12">
+				<p>Copyright (c) 2013 Fu-Jen Catholic University Institute of
+					Information Management. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</div>

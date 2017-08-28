@@ -1,0 +1,830 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!-- 新增教師學歷信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeaEdu" tabindex="-1"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增學歷信息</h4>
+			</div>
+			<form id="newTeaEduForm" action="newTeaEdu" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newEduTeaCode">
+					<div class="form-group">
+						<label>學校</label> <input type="text" name="teaSch"
+							id="newEduTeaSch" class="form-control margin-buttom-10" required>
+					</div>
+					<div class="form-group">
+						<label>系所</label> <input type="text" name="teaDep"
+							id="newEduTeaDep" class="form-control margin-buttom-10" required>
+					</div>
+					<div class="form-group">
+						<label>學位</label> <input type="text" name="teaDeg"
+							id="newEduTeaDeg" class="form-control margin-buttom-10" required>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師经历信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeaExp" tabindex="-1"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增經歷信息</h4>
+			</div>
+			<form id="newTeaExpForm" action="newTeaExp" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newExpTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaExpPer"
+							id="newTeaExpPer" class="form-control margin-buttom-10" required>
+					</div>
+					<div class="form-group">
+						<label>單位</label> <input type="text" name="teaExpUnit"
+							id="newTeaExpUnit" class="form-control margin-buttom-10" required>
+					</div>
+					<div class="form-group">
+						<label>部門</label> <input type="text" name="teaExpDep"
+							id="newTeaExpDep" class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>職稱</label> <input type="text" name="teaExpTitle"
+							id="newTeaExpTitle" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師專長信息 -->
+<div class="modal fade bs-example-modal-sm" id="newSpeExp" tabindex="-1"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增專長信息</h4>
+			</div>
+			<form id="newTeaSpeForm" action="newTeaSpe" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newSpeTeaCode">
+					<div class="form-group">
+						<label>專長</label> <input type="text" name="teaSpe" id="newTeaSpe"
+							class="form-control margin-buttom-10" required>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師期刊論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="newIssuePaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增期刊論文信息</h4>
+			</div>
+			<form id="newIssuePaperForm" action="newIssuePaper" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newIssuePaperTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newIssuePaperDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newIssuePaperDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師研討會論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="newMeetingPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增研討會論文信息</h4>
+			</div>
+			<form id="newMeetingPaperForm" action="newMeetingPaper" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newMeetingPaperTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newMeetingPaperDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newMeetingPaperDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師書籍信息 -->
+<div class="modal fade bs-example-modal-sm" id="newBooks" tabindex="-1"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增書籍信息</h4>
+			</div>
+			<form id="newBooksForm" action="newBooks" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newBooksTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newBooksDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newBooksDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師技術報告信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTechReport"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增技術報告信息</h4>
+			</div>
+			<form id="newTechReportForm" action="newTechReport" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newTechReportTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newTechReportDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newTechReportDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師畢業論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeacherPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增畢業論文信息</h4>
+			</div>
+			<form id="newTeacherPaperForm" action="newTeacherPaper" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newTeacherPaperTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newTeacherPaperDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newTeacherPaperDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師在資訊相關雜誌上近幾年發表之文章信息 -->
+<div class="modal fade bs-example-modal-sm" id="newMagazinePaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增在資訊相關雜誌上近幾年發表之文章信息</h4>
+			</div>
+			<form id="newMagazinePaperForm" action="newMagazinePaper"
+				method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newMagazinePaperTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newMagazinePaperDataPer"
+							class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont"
+							id="newMagazinePaperDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師期刊審查中論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="newWaitingPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增期刊審查中論文信息</h4>
+			</div>
+			<form id="newWaitingPaperForm" action="newWaitingPaper" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newWaitingPaperTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newWaitingPaperDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newWaitingPaperDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師學術著作信息 -->
+<div class="modal fade bs-example-modal-sm" id="newScholarPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增學術著作信息</h4>
+			</div>
+			<form id="newScholarPaperForm" action="newScholarPaper" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newScholarPaperTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newScholarPaperDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newScholarPaperDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師研究獎勵信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeaAwa" tabindex="-1"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增研究獎勵信息</h4>
+			</div>
+			<form id="newTeaAwaForm" action="newTeaAwa" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newTeaAwaTeaCode">
+					<div class="form-group">
+						<label>年度</label> <input type="text" name="teaAwaYear"
+							id="newTeaAwaYear" class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>單位</label>
+						<textarea rows="2" name="teaAwaDep" id="newTeaAwaDep"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+					<div class="form-group">
+						<label>獎項</label>
+						<textarea rows="4" name="teaAwa" id="newTeaAwa"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師研究計劃信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeaPlan"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增研究計劃信息</h4>
+			</div>
+			<form id="newTeaPlanForm" action="newTeaPlan" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newTeaPlanTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaPlanPer"
+							id="newTeaPlanPer" class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>主持人</label> <input type="text" name="teaPlanLeader"
+							id="newTeaPlanLeader" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>計劃名稱</label>
+						<textarea rows="4" name="teaPlanName" id="newTeaPlanName"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+					<div class="form-group">
+						<label>贊助單位</label>
+						<textarea rows="2" name="teaPlanSpon" id="newTeaPlanSpon"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+					<div class="form-group">
+						<label>贊助金額</label> <input type="text" name="teaPlanMon"
+							id="newTeaPlanMon" class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>職稱</label> <input type="text" name="teaPlanPos"
+							id="newTeaPlanPos" class="form-control margin-buttom-10" required>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師實務研究信息 -->
+<div class="modal fade bs-example-modal-sm" id="newPractical"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增實務研究信息</h4>
+			</div>
+			<form id="newPracticalForm" action="newPractical" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newPracticalTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newPracticalDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newPracticalDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師指導學生專題信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeaStuTopic"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增指導學生專題信息</h4>
+			</div>
+			<form id="newTeaStuTopicForm" action="newTeaStuTopic" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newTeaStuTopicTeaCode">
+					<div class="form-group">
+						<label>年度</label> <input type="number" min="0" name="teaStuYear"
+							id="newTeaStuYear" class="form-control margin-buttom-10" required>
+						<span class="help-block">此處僅能輸入數字！</span>
+					</div>
+
+					<div class="form-group">
+						<label>專題名稱</label>
+						<textarea rows="4" name="teaStuName" id="newTeaStuName"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師指導研究生論文信息 -->
+<div class="modal fade bs-example-modal-sm" id="newTeaStuPaper"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增指導研究生論文信息</h4>
+			</div>
+			<form id="newTeaStuPaperForm" action="newTeaStuPaper" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newTeaStuPaperTeaCode">
+					<div class="form-group">
+						<label>年度</label> <input type="number" min="0" name="teaStuYear"
+							id="newTeaStuYear" class="form-control margin-buttom-10" required>
+						<span class="help-block">此處僅能輸入數字！</span>
+					</div>
+
+					<div class="form-group">
+						<label>研究生名稱</label> <input type="text" name="teaStuName"
+							id="newTeaStuName" class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>論文題目</label>
+						<textarea rows="4" name="teaStuPaperName" id="newTeaStuPaperName"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師其他教學經驗信息 -->
+<div class="modal fade bs-example-modal-sm" id="newOtherTeaExp"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增其他教學經驗信息</h4>
+			</div>
+			<form id="newOtherTeaExpForm" action="newOtherTeaExp" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newOtherTeaExpTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newOtherTeaExpDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newOtherTeaExpDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師校內服務信息 -->
+<div class="modal fade bs-example-modal-sm" id="newInSchService"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增校內服務信息</h4>
+			</div>
+			<form id="newInSchServiceForm" action="newInSchService" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newInSchServiceTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newInSchServiceDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newInSchServiceDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師校外服務信息 -->
+<div class="modal fade bs-example-modal-sm" id="newOutSchService"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增校外服務信息</h4>
+			</div>
+			<form id="newOutSchServiceForm" action="newOutSchService"
+				method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newOutSchServiceTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newOutSchServiceDataPer"
+							class="form-control margin-buttom-10" required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont"
+							id="newOutSchServiceDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師擔任委員信息 -->
+<div class="modal fade bs-example-modal-sm" id="newAsCommitMem"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增擔任委員信息</h4>
+			</div>
+			<form id="newAsCommitMemForm" action="newAsCommitMem" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newAsCommitMemTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newAsCommitMemDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newAsCommitMemDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 新增教師學術經驗信息 -->
+<div class="modal fade bs-example-modal-sm" id="newScholarExp"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">新增學術經驗信息</h4>
+			</div>
+			<form id="newScholarExpForm" action="newScholarExp" method="post">
+				<div class="modal-body">
+					<input type="hidden" name="teaCode" id="newScholarExpTeaCode">
+					<div class="form-group">
+						<label>期間</label> <input type="text" name="teaDataPer"
+							id="newScholarExpDataPer" class="form-control margin-buttom-10"
+							required>
+					</div>
+
+					<div class="form-group">
+						<label>內容</label>
+						<textarea rows="4" name="teaDataCont" id="newScholarExpDataCont"
+							class="form-control margin-buttom-10" required></textarea>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary">確認</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
